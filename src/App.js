@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
 import './App.css';
-import ClassList from "./Components/ClassList/ClassList.js";
-import FuncList from "./Components/FuncList/FuncList.js";
+import ClassExample from "./Components/ClassExample/ClassExample.js";
+import FunctionExample from "./Components/FunctionExample/FunctionExample.js";
 
 class App extends Component {
     render() {
+        console.log('App');
         return (
             <div className="App">
-                <ClassList/>
-                <FuncList/>
+                <ClassExample/>
+                <FunctionExample/>
             </div>
         );
     }

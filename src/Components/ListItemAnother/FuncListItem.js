@@ -1,7 +1,7 @@
 import React, {Component, PureComponent} from 'react';
-import './ListItemAnother.css'
+import './FuncListItem.css'
 
-function ListItemAnother(props) {
+function FuncListItem(props) {
         const { text } = props
         console.log('ListItem', text);
         return (
@@ -11,4 +11,4 @@ function ListItemAnother(props) {
         )
 }
 
-export default React.memo(ListItemAnother);
+export default React.memo(FuncListItem);

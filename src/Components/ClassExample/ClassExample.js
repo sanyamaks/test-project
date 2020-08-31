@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import './ClassList.css';
+import './ClassExample.css';
 import List from "../List/List.js";
 import Button from "../Button/Button.js";
 
-class ClassList extends Component {
+class ClassExample extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -26,14 +26,12 @@ class ClassList extends Component {
 
     addMessage = () => {
         console.log('AddMessage');
-        const id = this.setNewId();
-        const newMessages = this.state.messages;
-        newMessages.push({title: `text${id}`, id: id})
-        this.setState({messages: newMessages});
+        const id = this.getNewId();
+        this.setState({messages: [...this.state.messages, {title: `text${id}`, id: id}]});
         console.log(this.state.messages);
     }
 
-    checkLastId = () => {
+    getLastId = () => {
         const messages = this.state.messages
         if (messages.length === 0) {
             return 0;
@@ -41,8 +39,8 @@ class ClassList extends Component {
         return messages[messages.length - 1].id;
     }
 
-    setNewId = () => {
-        return this.checkLastId() + 1;
+    getNewId = () => {
+        return this.getLastId() + 1;
     }
 
     render() {
@@ -55,4 +53,4 @@ class ClassList extends Component {
     }
 }
 
-export default ClassList;
+export default ClassExample;

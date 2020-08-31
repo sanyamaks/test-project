@@ -2,11 +2,11 @@ import React, {Component, PureComponent} from 'react';
 import './List.css'
 import ListItem from "../ListItem/ListItem.js";
 
-class List extends Component {
+class List extends PureComponent {
     // В данном случае, если PureComponent, то перересовка непроисходит вообще при добавлении пунктов
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        return nextProps !== this.props
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //     return nextProps !== this.props
+    // }
 
     render() {
         console.log('List');

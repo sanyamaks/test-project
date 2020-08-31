@@ -1,11 +1,11 @@
 import React, {Component, PureComponent} from 'react';
 import './ListItem.css'
 
-class ListItem extends Component {
+class ListItem extends PureComponent {
     // В данном случае, если PureComponent, то не меняющийся компонент не перересовывается
-    shouldComponentUpdate(nextProps, nextState, nextContext) {
-        return false
-    }
+    // shouldComponentUpdate(nextProps, nextState, nextContext) {
+    //     return false
+    // }
 
     render () {
         const { text } = this.props

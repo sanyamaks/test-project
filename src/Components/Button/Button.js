@@ -1,7 +1,7 @@
 import React, {Component, PureComponent} from 'react';
 import './Button.css'
 
-class Button extends Component {
+class Button extends PureComponent {
 
     // shouldComponentUpdate(nextProps, nextState, nextContext) {
     //     return false
@@ -14,6 +14,7 @@ class Button extends Component {
 
     render() {
         console.log('Button');
+        console.log(this.props);
         return (
             <button className='button' onClick={this.handleClick}>+</button>
         )
